@@ -22,7 +22,7 @@
     "thumbprint": "0.0.1",
     "xmldom": "~0.1.15",
     "xpath": "0.0.5",
-    "xml-crypto": "0.0.13",
+    "xml-crypto": "git+ssh://git@github-ca.corp.zynga.com:platform/xml-crypto.git#master",
     "xtend": "~1.0.3"
   },
   "devDependencies": {
@@ -32,7 +32,7 @@
     "request": "~2.14.0",
     "xmldom": "~0.1.13",
     "cheerio": "~0.10.7",
-    "xml-crypto": "0.0.10",
+    "xml-crypto": "git+ssh://git@github-ca.corp.zynga.com:platform/xml-crypto.git#master",
     "xpath": "0.0.5"
   }
 }
