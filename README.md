@@ -32,6 +32,7 @@ Options
 | RelayState          | state of the auth process                        | ```req.query.RelayState || req.body.RelayState``` |
 | sessionIndex          | the index of a particular session between the principal identified by the subject and the authenticating authority                        | _SessionIndex is not included_ |
 | responseHandler       | custom response handler for SAML response f(req, res, SAMLResponse) | HTML response that POSTS to postUrl |
+| prefix              | add a prefix (namespace) to the signature elements, such as 'ds' | null |
 
 
 Add the middleware as follows:
@@ -41,7 +42,7 @@ app.get('/samlp', samlp.auth({
   issuer:     'the-issuer',
   cert:       fs.readFileSync(path.join(__dirname, 'some-cert.pem')),
   key:        fs.readFileSync(path.join(__dirname, 'some-cert.key')),
-  getPostURL: function (wtrealm, wreply, req, callback) { 
+  getPostURL: function (wtrealm, wreply, req, callback) {
                 return cb( null, 'http://someurl.com')
               }
 }));
