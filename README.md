@@ -32,7 +32,7 @@ Options
 | RelayState          | state of the auth process                        | ```req.query.RelayState || req.body.RelayState``` |
 | sessionIndex          | the index of a particular session between the principal identified by the subject and the authenticating authority                        | _SessionIndex is not included_ |
 | responseHandler       | custom response handler for SAML response f(req, res, SAMLResponse) | HTML response that POSTS to postUrl |
-| prefix              | add a prefix (namespace) to the signature elements, such as 'ds' | null |
+| signatureSettings     | allows adding prefix to signature tags, attrs to signature root node, and specifying location of signature node (see https://github.com/yaronn/xml-crypto#signedxml > computeSignature/options/prefix) | null |
 
 
 Add the middleware as follows:
